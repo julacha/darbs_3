@@ -33,12 +33,11 @@ background-color: seagreen;
   }
 #game_grid {
     display:grid;
-    background-color: yellowgreen;
-    grid-gap: 5px;
+    grid-gap: 10px;
     height: 75vh;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: repeat(40px, auto);
-    grid-gap: 20px;
+/*     grid-template-columns: repeat(auto-fill, minmax(50px, 80px) ) ; */
+    grid-template-columns: repeat(auto-fill, minmax(40px, 60px));
+    grid-auto-rows: 40px;
 }
    /*  grid-template-areas:  
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
@@ -49,22 +48,14 @@ background-color: seagreen;
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
     "cell cell cell cell cell cell cell cell cell cell . . . . ."; */
 
-.game_grid > div {
+.cell {
     border-radius: 5px;
-    padding: 10px;
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
+    padding: 5px;
+    border: 2px solid black;
   }  
 
-/* @media (min-width: 576px){
-    #outer-container {
-            display:grid;
-            grid-template-rows: 1fr 2fr 70%;
-            grid-template-columns: 1fr;
-            grid-template-areas:
-            "header"
-            "register"
-            "main"
+@media (max-width: 576px){
+    #game_grid {
+        grid-template-columns: 1fr 1f 1fr;
             }
     }
- */
