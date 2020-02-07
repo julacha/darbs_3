@@ -1,8 +1,7 @@
 #outer-container {
 display:grid;
 height: 95vh;
-border-color: white;
-grid-template-rows: 1fr 2fr 7fr;
+grid-template-rows: 1fr 3fr auto;
 grid-template-columns: 1fr;
 grid-template-areas:
 "header"
@@ -27,25 +26,36 @@ background-color: seagreen;
 }
 #play_area {
     grid-area: play_area;
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
   }
 #game_grid {
     display:grid;
-    background-color: cornflowerblue;
-    grid-template-rows: repeat(15, 50px);
-    grid-template-columns: repeat(7, 70px); 
-    grid-gap: 10px;
-    grid-template-areas: 
+    background-color: yellowgreen;
+    grid-gap: 5px;
+    height: 75vh;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: repeat(40px, auto);
+    grid-gap: 20px;
+}
+   /*  grid-template-areas:  
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell" 
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
     "cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell"
-    "cell cell cell cell cell cell cell cell cell cell . . . . .";
-}
-.cell{
-    grid-area: cell;
-}
+    "cell cell cell cell cell cell cell cell cell cell . . . . ."; */
+
+.game_grid > div {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+  }  
+
 /* @media (min-width: 576px){
     #outer-container {
             display:grid;
