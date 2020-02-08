@@ -26,6 +26,9 @@ grid-area: register;
 height: 25vh;
 background-color: seagreen;
 }
+.start{
+  display:flex;
+}
 #play_area {
     grid-area: play_area;
     width: 85%;
