@@ -1,20 +1,19 @@
 console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
-const status = document.getElementById("game-status");
+const reset = document.getElementById("Resetbtn");
 
 function onClick(event) {
     console.log("Event of type", event.type);
     const cl = event.currentTarget;
     console.log("My id is", cl.id);
-
+    
     const num_str=cl.id.slice(2);
     const num = parseInt(num_str);
-    // если написано не число - ничего не делаем
     if (isNaN(num))
     {
         return; 
-    }
-console.log("Here is",num ); 
+    } 
+console.log("My nuber is",num ); 
 //console.log(`onClick${i}`);
 if (num % 5 === 0 && num % 3 === 0) {
 cl.classList.add("fizzbuzz_selected");
@@ -36,11 +35,22 @@ function addListeners() {
    console.log(cell.length);
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
-    //console.log(cl.id);
-    cl.addEventListener("click", onClick);
+    console.log(cl.id);
+    cl.addEventListener("click", onClick)
+    reset.addEventListener("click", onReset);
 }
 }
 
+function onReset() {
+for (let i=0; i <= cell.lendht; i++){
+    const c = cell[i];
+    c.classList.remove("buzz_selected");
+    c.classList.remove("fizz_selected");
+    c.classList.remove("fizzbuzz_selected");
+    console.log("Resetting Game");
+}
+}
+    
 function main (){
     console.log("Running main");
     addListeners();
