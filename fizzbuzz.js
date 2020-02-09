@@ -2,25 +2,34 @@ console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
 const status = document.getElementById("game-status");
 
-/* function renderGame(){
-status.textContent =
-}
- */
 function onClick(event) {
     console.log("Event of type", event.type);
     const cl = event.currentTarget;
     console.log("My id is", cl.id);
 
-for (let i = 0; i <= 100; i++) {
-    const fb = cell[i];
+    const num_str=cl.id.slice(2);
+    const num = parseInt(num_str);
+    // если написано не число - ничего не делаем
+    if (isNaN(num))
+    {
+        return; 
+    }
+console.log("Here is",num ); 
+//console.log(`onClick${i}`);
+if (num % 5 === 0 && num % 3 === 0) {
+cl.classList.add("fizzbuzz_selected");
+console.log("Here is fizzbuzz");
+}
+else if (num % 3 == 0) {
+    cl.classList.add("fizz_selected");
+    console.log("Here is fizz");    
+}
+else if (num % 5 == 0) {
+    cl.classList.add("buzz_selected"); 
+    console.log("Here is buzz");   
+}
+}
 
-    if ( i % 5 === 0 && i % 3 === 0 ){
-    fb.setAttribute(."FizzBuzz");
-    console.log(onClick[9]);
-}
-}
-renderGame(); 
-}
 
 function addListeners() {
    console.log("Adding Listeners");
@@ -28,7 +37,6 @@ function addListeners() {
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     //console.log(cl.id);
-    //cl.setAttribute("data-value",i);
     cl.addEventListener("click", onClick);
 }
 }

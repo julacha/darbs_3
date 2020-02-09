@@ -51,15 +51,20 @@ background-color: seagreen;
     align-items: center;
     justify-content: center;
   }  
-.fizz{
-
-  }
-.buzz{
-
+  
+.buzz_selected {    
+  background: red;
+  color: white;
 }
-.fizzbuzz{
-    
+.fizz_selected {
+  background: blue;
+  color: white;
 }
+.fizzbuzz_selected {
+  background: violet;
+  color: white;
+}
+
 @media (max-width: 576px){
     #game_grid {
         grid-template-columns: 1fr 1f 1fr;
