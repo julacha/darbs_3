@@ -42,7 +42,7 @@ for (let i=0; i < cell.length; i++){
 }
 
 function onReset() {
-for (let i=0; i <= cell.lendht; i++){
+for (let i=0; i < cell.length; i++){
     const c = cell[i];
     c.classList.remove("buzz_selected");
     c.classList.remove("fizz_selected");
