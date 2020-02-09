@@ -14,12 +14,28 @@
         fIZZBUZZ
         </header>
          <div class="register">
-         <div class="start">
-    
-      <input class="btnReset" id="Resetbtn" type="button" value="RESET">
-     
-        </div>
-        </div>
+         <div play_reset>
+         <input class="btnReset" id="Resetbtn" type="button" value="RESET">
+         </div>
+         <div class="form_1">
+      <form action>
+        Starting Value:
+        <input type="number" name="field"  id="minInput"  min="1" max="99" onpaste="return false">
+        <br>
+        Ending Value:
+        <input type="number" name="field"  id="maxInput"  min="2" max="100" onpaste="return false"> 
+        <br>
+        <input type="submit" value="SUBMIT">
+      </form>
+      </div>
+      <div class="form_2">
+        <input class="fizzBtn" id="fzbtn" type="button" value="FIZZ"><br>
+        <br>
+        <input class="buzzBtn" id="bzbtn" type="button" value="BUZZ"><br>
+        <br>
+        <input class="fizzbuzzBtn" id="fbbtn" type="button" value="FIZZBUZZ">
+      </div>
+      </div>
     <div id="play_area">
     <div id="game_grid">
 <div class="cell num" id="sq1">1</div>
@@ -122,10 +138,6 @@
 <div class="cell num" id="sq98">98</div>
 <div class="cell fizz" id="sq99">99</div>
 <div class="cell buzz" id="sq100">100</div>
-<div class="cell bzz" id="sq101">BUZZ</div>
-<div class="cell fzz" id="sq102">FIZZ</div>
-<div class="cell fzbz" id="sq103"><p>FIZZ<br>BUZZ</p></div>
-
 </div> <!-- close game_grid -->
 </div> <!-- close play_area -->
 </div> <!-- close outer-container --> 

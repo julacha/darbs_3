@@ -23,11 +23,21 @@ h1{
 } 
 .register{
 grid-area: register;
+display:flex;
+justify-content: space-around;
+align-items: center;
 height: 25vh;
 background-color: seagreen;
 }
-.start{
-  display:flex;
+.form_1{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.form_2{
+ display:flex;
+ align-items: center;
+ justify-content: space-around;
 }
 #play_area {
     grid-area: play_area;
@@ -43,7 +53,7 @@ background-color: seagreen;
     grid-auto-rows: 40px;
 }
  .cell {
-   display:flex;
+    display:flex;
     border-radius: 5px;
     padding: 5px;
     border: 2px solid black;

@@ -29,7 +29,6 @@ else if (num % 5 == 0) {
 }
 }
 
-
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
