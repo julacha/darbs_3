@@ -1,9 +1,9 @@
 console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
 const reset = document.getElementById("Resetbtn");
-/* const inputMin = document.getElementById("minInput");
-const inputMax = document.getElementById("maxInput");
-const sbtn = document.getElementById("subbtn"); */
+const inputmin = document.getElementById("minInput");
+const inputmax = document.getElementById("maxInput");
+const sbtn = document.getElementById("subbtn");
 const fizzbtn = document.getElementById("fzbtn");
 const buzzbtn = document.getElementById("bzbtn");
 const fizzbuzzbtn = document.getElementById ("fzbzbtn"); 
@@ -21,6 +21,7 @@ function onClick(event) {
     {
         return; 
     } 
+
 console.log("My number is",num ); 
 //console.log(`onClick${i}`);
 if (num % 5 === 0 && num % 3 === 0) {
@@ -48,7 +49,6 @@ function onShowAllBuzz(){
     const allBuzzCells = document.getElementsByClassName("buzz");
     for (let i = 0; i<allBuzzCells.length; i++) {
         allBuzzCells[i].classList.add("buzz_selected");
-     
     }
 }
 
@@ -57,8 +57,8 @@ function onShowAllFizzBuzz () {
     for (let i=0; i<allFizzBuzzCells.length; i++){
     allFizzBuzzCells[i].classList.add("fizzbuzz_selected");
     }
-
 } 
+
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
@@ -69,12 +69,15 @@ function addListeners() {
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
-    cl.addEventListener("click", onClick)
+    cl.addEventListener("click", onClick);
+    sbtn.addEventListener("click", onClick);
 }
 
 } 
-
-
+/* function onSubmit{
+    console.log("Submit_minmax");
+}
+ */
 
 function onReset() {
 for (let i=0; i < cell.length; i++){

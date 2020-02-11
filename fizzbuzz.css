@@ -71,7 +71,7 @@ background-color: seagreen;
   color: white;
 }
 .fizzbuzz_selected {
-  background: violet;
+  background: rgb(1, 248, 1);
   color: white;
 }
 
