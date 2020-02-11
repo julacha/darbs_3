@@ -1,9 +1,9 @@
 console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
 const reset = document.getElementById("Resetbtn");
-const inputmin = document.getElementById("minInput");
-const inputmax = document.getElementById("maxInput");
-const sbtn = document.querySelector("#subbtn");
+const inputMin = document.getElementById("minInput");
+const inputMax = document.getElementById("maxInput");
+const sbtn = document.getElementById("subbtn");
 const fizzbtn = document.getElementById("fzbtn");
 const buzzbtn = document.getElementById("bzbtn");
 const fizzbuzzbtn = document.getElementById ("fzbzbtn"); 
@@ -69,7 +69,8 @@ function addListeners() {
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
    sbtn.addEventListener("click", onSubmit);
    console.log("Submit data");
-
+console.log(inputMin.value);
+console.log(inputMax.value);
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
