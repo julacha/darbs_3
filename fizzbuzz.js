@@ -1,16 +1,12 @@
 console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
 const reset = document.getElementById("Resetbtn");
-const inputMin = document.getElementById("minInput");
+/* const inputMin = document.getElementById("minInput");
 const inputMax = document.getElementById("maxInput");
-const sbtn = document.getElementById("subbtn");
-const allFizzCells = document.getElementsByClassName("fizz");
+const sbtn = document.getElementById("subbtn"); */
 const fizzbtn = document.getElementById("fzbtn");
-const allBuzzCells = document.getElementsByClassName("buzz");
 const buzzbtn = document.getElementById("bzbtn");
-
-inputMin.value = 1;
-inputMax.value = 100;
+const fizzbuzzbtn = document.getElementById ("fzbzbtn"); 
 
 
 
@@ -45,28 +41,35 @@ function onShowAllFiz() {
     const allFizzCells = document.getElementsByClassName("fizz");
     for (let i=0;i<allFizzCells.length;i++) {
         allFizzCells[i].classList.add("fizz_selected");
+    }           
+ }
+
+function onShowAllBuzz(){
+    const allBuzzCells = document.getElementsByClassName("buzz");
+    for (let i = 0; i<allBuzzCells.length; i++) {
+        allBuzzCells[i].classList.add("buzz_selected");
+     
     }
-    //new alternative loop
-    // for (let el of allFizzCells) {
-    //     el.classList.add("fizz_selected");
-    // }
 }
 
+function onShowAllFizzBuzz () {
+    const allFizzBuzzCells = document.getElementsByClassName ("fizzbuzz");
+    for (let i=0; i<allFizzBuzzCells.length; i++){
+    allFizzBuzzCells[i].classList.add("fizzbuzz_selected");
+    }
+
+} 
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
    reset.addEventListener("click", onReset);
+   buzzbtn.addEventListener("click", onShowAllBuzz);
    fizzbtn.addEventListener("click", onShowAllFiz);
-   
+   fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
     cl.addEventListener("click", onClick)
-
-    // const fizz = [i];
-    // console.log("My class is fizz");
-
-
 }
 
 } 
