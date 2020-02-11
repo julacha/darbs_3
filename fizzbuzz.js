@@ -3,11 +3,12 @@ const cell = document.getElementsByClassName("cell");
 const reset = document.getElementById("Resetbtn");
 const inputmin = document.getElementById("minInput");
 const inputmax = document.getElementById("maxInput");
-const sbtn = document.getElementById("subbtn");
+const sbtn = document.querySelector("#subbtn");
 const fizzbtn = document.getElementById("fzbtn");
 const buzzbtn = document.getElementById("bzbtn");
 const fizzbuzzbtn = document.getElementById ("fzbzbtn"); 
-
+const maxIn = document.querySelector("#maxInput");
+const minIn = document.querySelector("#minInput");
 
 
 function onClick(event) {
@@ -66,18 +67,21 @@ function addListeners() {
    buzzbtn.addEventListener("click", onShowAllBuzz);
    fizzbtn.addEventListener("click", onShowAllFiz);
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
+   sbtn.addEventListener("click", onSubmit);
+   console.log("Submit data");
+
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
     cl.addEventListener("click", onClick);
-    sbtn.addEventListener("click", onClick);
-}
+   }
 
 } 
-/* function onSubmit{
+function onSubmit(){
     console.log("Submit_minmax");
 }
- */
+
+
 
 function onReset() {
 for (let i=0; i < cell.length; i++){
