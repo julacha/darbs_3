@@ -6,8 +6,8 @@ const inputMax = document.getElementById("maxInput");
 const sbtn = document.getElementById("subbtn");
 const allFizzCells = document.getElementsByClassName("fizz");
 const fizzbtn = document.getElementById("fzbtn");
-const secondbtn = document.getElementsByClassName(".cell buzz");
-const thirdbbtn = document.getElementsByClassName(".cell fizzbuzz");
+const allBuzzCells = document.getElementsByClassName("buzz");
+const buzzbtn = document.getElementById("bzbtn");
 
 inputMin.value = 1;
 inputMax.value = 100;
@@ -57,6 +57,7 @@ function addListeners() {
    console.log(cell.length);
    reset.addEventListener("click", onReset);
    fizzbtn.addEventListener("click", onShowAllFiz);
+   
 for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
