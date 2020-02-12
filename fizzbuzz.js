@@ -59,19 +59,15 @@ function onShowAllFizzBuzz () {
     }
 } 
 
-
 function onClearAll() {
-    console.log (`My value is ${minInp.value}`);
-    console.log (`My value is ${maxInp.value}`);
-    console.log("Button was clicked");
-    console.log("Clear some elements");
-for (minInp; minInput < maxInp; maxInp++){
-    const num = cell[i]; 
- if (num < minInp && maxInp < num){
-    num.classList.remove("cell"); 
- }
- console.log("Clear all elements");  
-}
+    console.log (`My starting value is ${minInp.value}`);
+    console.log (`My ending Value is ${maxInp.value}`);
+  /*   for(let i=0; i < cell.length; i++){
+    if (cell < minInp && maxInp < cell){ 
+    //document.getElementsByClassName('cell').remove();   
+    cell[i].classList.remove("cell"); 
+ }*/
+ console.log("Clear other elements");  
 }
 
 function addListeners() {
@@ -83,8 +79,8 @@ function addListeners() {
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
    sbtn.addEventListener("click", onClearAll);
    console.log("Submit data");
-   minInp.addEventListener('click', onClearAll);
-   maxInp.addEventListener('click', onClearAll);
+   minInp.addEventListener('click', onClick);
+   maxInp.addEventListener('click', onClick);
    for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
