@@ -1,21 +1,18 @@
 console.log("Started FizzBuzz");
 const cell = document.getElementsByClassName("cell");
 const reset = document.getElementById("Resetbtn");
-const inputMin = document.getElementById("minInput");
-const inputMax = document.getElementById("maxInput");
+const maxInp = document.querySelector("#maxInput");
+const minInp = document.querySelector("#minInput");
 const sbtn = document.getElementById("subbtn");
 const fizzbtn = document.getElementById("fzbtn");
 const buzzbtn = document.getElementById("bzbtn");
 const fizzbuzzbtn = document.getElementById ("fzbzbtn"); 
-const maxIn = document.querySelector("#maxInput");
-const minIn = document.querySelector("#minInput");
 
 
 function onClick(event) {
     console.log("Event of type", event.type);
     const cl = event.currentTarget;
     console.log("My id is", cl.id);
-    
     const num_str=cl.id.slice(2);
     const num = parseInt(num_str);
     if (isNaN(num))
@@ -25,6 +22,7 @@ function onClick(event) {
 
 console.log("My number is",num ); 
 //console.log(`onClick${i}`);
+
 if (num % 5 === 0 && num % 3 === 0) {
 cl.classList.add("fizzbuzz_selected");
 console.log("This is fizzbuzz");
@@ -36,8 +34,9 @@ else if (num % 3 == 0) {
 else if (num % 5 == 0) {
     cl.classList.add("buzz_selected"); 
     console.log("This is buzz");   
-}
-}
+} 
+} 
+
 
 function onShowAllFiz() {
     const allFizzCells = document.getElementsByClassName("fizz");
@@ -60,6 +59,21 @@ function onShowAllFizzBuzz () {
     }
 } 
 
+
+function onClearAll() {
+    console.log (`My value is ${minInp.value}`);
+    console.log (`My value is ${maxInp.value}`);
+    console.log("Button was clicked");
+    console.log("Clear some elements");
+for (minInp; minInput < maxInp; maxInp++){
+    const num = cell[i]; 
+ if (num < minInp && maxInp < num){
+    num.classList.remove("cell"); 
+ }
+ console.log("Clear all elements");  
+}
+}
+
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
@@ -67,22 +81,16 @@ function addListeners() {
    buzzbtn.addEventListener("click", onShowAllBuzz);
    fizzbtn.addEventListener("click", onShowAllFiz);
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
-   sbtn.addEventListener("click", onSubmit);
+   sbtn.addEventListener("click", onClearAll);
    console.log("Submit data");
-console.log(inputMin.value);
-console.log(inputMax.value);
-for (let i=0; i < cell.length; i++){
+   minInp.addEventListener('click', onClearAll);
+   maxInp.addEventListener('click', onClearAll);
+   for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
-    cl.addEventListener("click", onClick);
-   }
-
-} 
-function onSubmit(){
-    console.log("Submit_minmax");
+    cl.addEventListener("click", onClick); 
 }
-
-
+}   
 
 function onReset() {
 for (let i=0; i < cell.length; i++){
