@@ -58,16 +58,21 @@ function onShowAllFizzBuzz () {
     allFizzBuzzCells[i].classList.add("fizzbuzz_selected");
     }
 } 
+function onCreate(){
+    
+}
 
 function onClearAll() {
     console.log (`My starting value is ${minInp.value}`);
     console.log (`My ending Value is ${maxInp.value}`);
-  /*   for(let i=0; i < cell.length; i++){
+for(let i=0; i < document.getElementsByClassName('cell').length; i++){
+    //const sq = cell [i];
     if (cell < minInp && maxInp < cell){ 
-    //document.getElementsByClassName('cell').remove();   
-    cell[i].classList.remove("cell"); 
- }*/
+    document.getElementsByClassName('cell')[i].remove();   
+    //sq[i].classList.remove(cell[i]); 
+ } 
  console.log("Clear other elements");  
+}
 }
 
 function addListeners() {
