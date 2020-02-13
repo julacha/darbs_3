@@ -64,11 +64,10 @@ function onShowAllFizzBuzz () {
 
 function onClearAll() {
 console.log (`My starting value is ${minInp.value}`);
-console.log (`My ending Value is ${maxInp.value}`);    
-
-   
+console.log (`My ending Value is ${maxInp.value}`);
+const cell = cell [i];
+ 
 for(let i=0; i < cell.length; i++){
-    const cell = cell [i];
     if (cell < minInp && maxInp < cell){ 
     document.getElementsByClassName('cell').remove(cell[i]);   
     //cell[i].classList.remove(cell); 
