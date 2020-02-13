@@ -1,3 +1,6 @@
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
 #outer-container {
 display:grid;
 height: 95vh;
@@ -14,15 +17,16 @@ grid-template-areas:
     display:flex;
     background-color: rgb(168, 152, 168);
     height: 10vh;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
     }
 h1{
     text-transform:uppercase;
-    color:white;
     text-align: center;
     font-size: 45px;
     font-weight:1000;
+    margin: 50px;
 } 
 
 p{
@@ -43,40 +47,69 @@ justify-content: space-around;
 align-items: center;
 height: 25vh;
 background-color: rgb(252, 152, 152);
-
-
 }
 .container{
-  flex: 1 1 0;
   align-items: center;
   text-align: justify;
   margin: 30px;
 }
 .form_1{
  display: flex;
- flex: 1 1 0;
  align-items: center;
- justify-content: space-around;
  margin: 30px;
 }
 .form_2{
  display:flex;
- flex: 1 1 0;
  align-items: center;
- justify-content: space-around;
  margin: 30px;
+}
+input[type=number] {
+  
+  padding: 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid  rgb(168, 152, 168);
+  border-radius: 4px;
 }
 
 .fizzBtn{
-  margin: 10px;
+  background-color: #4CAF50; 
+  border-color: darkgreen;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .buzzBtn{
-  margin: 10px;
+  background-color:#008CBA; 
+  border-color: blue;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .fizzbuzzBtn{
-  margin: 10px;
+  background-color:#f44336;
+  border-color: red;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 }
 #minInput{
 }
@@ -104,15 +137,15 @@ background-color: rgb(252, 152, 152);
   }  
 
 .buzz_selected {    
-  background: red;
+  background: #008CBA;
   color: white;
 }
 .fizz_selected {
-  background: blue;
+  background: #4CAF50;
   color: white;
 }
 .fizzbuzz_selected {
-  background: rgb(1, 248, 1);
+  background: #f44336;
   color: white;
 }
 
