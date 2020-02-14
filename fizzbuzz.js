@@ -72,7 +72,8 @@ while (gameGrid.firstChild) {
 }
 function onCreate(){
 console.log("Adding new cells");
-const sq = document.createElement("cell").firstElementChild.innerHTML;
+//const sq = gameGrid.firstChild(cell);
+const cell = document.getElementsByClassName("cell");
 for(let i=0; i < cell.length; i++){
 if ((sq < minInp) && (maxInp < sq)){ 
     //document.getElementsByClassName('cell').remove("cell");   
@@ -90,6 +91,7 @@ function addListeners() {
    fizzbtn.addEventListener("click", onShowAllFiz);
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
    sbtn.addEventListener("click", onClear);
+   sbtn.addEventListener("click", onCreate);
    console.log("Submit data");
    minInp.addEventListener('click', onClick);
    maxInp.addEventListener('click', onClick);
