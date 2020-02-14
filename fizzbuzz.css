@@ -1,6 +1,7 @@
 body{
   font-family: 'Josefin Sans', sans-serif;
 }
+
 #outer-container {
 display:grid;
 height: 95vh;
@@ -45,11 +46,7 @@ align-items: center;
 height: 25vh;
 background-color: khaki;
 }
-.container{
-  align-items: center;
-  text-align: justify;
-  margin: 30px;
-}
+
 .form_1{
  display: flex;
  align-items: center;
@@ -137,8 +134,7 @@ input[type=number] {
     width: 85%;
     height: 65vh;
     margin:20px auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif;
-  }
+      }
 #game_grid {
     display:grid;
     grid-gap: 10px;
@@ -168,9 +164,8 @@ input[type=number] {
   color: white;
 }
 
-/* @media (max-width: 576px){
-    #game_grid {
-      grid-template-rows: 1fr 3fr 5fr;
-            }
-      
-    } */
+@media (max-width: 576px){
+ .rules {
+  display: none;
+}
+}
