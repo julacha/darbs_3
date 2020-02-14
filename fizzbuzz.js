@@ -62,15 +62,15 @@ function onShowAllFizzBuzz () {
 
 } */
 
-function onClearAll() {
+function onClearAll(event) {
 console.log (`My starting value is ${minInp.value}`);
 console.log (`My ending Value is ${maxInp.value}`);
-const cell = cell [i];
  
 for(let i=0; i < cell.length; i++){
-    if (cell < minInp && maxInp < cell){ 
-    document.getElementsByClassName('cell').remove(cell[i]);   
-    //cell[i].classList.remove(cell); 
+    const oth = 
+     if ((cell< minInp) && (maxInp < cell)){ 
+    //document.getElementsByClassName('cell').remove("buzz_selected");   
+    oth.classList.remove("buzz_selected"); 
  } 
  console.log("Clear other elements");  
 }

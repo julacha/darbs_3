@@ -29,14 +29,11 @@ h1{
     margin: 50px;
 } 
 
-p{
-display:flex;
-margin-bottom: 2px;
-}
 .rules {
-  grid-area: rules;
-  display: flex;
-  justify-content: center;
+grid-area: rules;
+display: flex;
+flex-direction: column;
+justify-content: center;
 align-items: center;
 background-color: rgba(255, 193, 177, 0.918);
 }
@@ -63,8 +60,32 @@ background-color: rgb(252, 152, 152);
  align-items: center;
  margin: 30px;
 }
+.btnReset{
+  background-color: white;
+  border-color: #555555;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btnone{
+  background-color: white;
+  border-color: #555555;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 40px;
+}
+
 input[type=number] {
-  
   padding: 5px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -110,9 +131,7 @@ input[type=number] {
   cursor: pointer;
   border-radius: 4px;
 }
-}
-#minInput{
-}
+
 #play_area {
     grid-area: play_area;
     width: 85%;
@@ -149,8 +168,9 @@ input[type=number] {
   color: white;
 }
 
-@media (max-width: 576px){
+/* @media (max-width: 576px){
     #game_grid {
-        grid-template-columns: 1fr 1f 1fr;
+      grid-template-rows: 1fr 3fr 5fr;
             }
-    }
+      
+    } */
