@@ -58,20 +58,19 @@ function onShowAllFizzBuzz () {
     allFizzBuzzCells[i].classList.add("fizzbuzz_selected");
     }
 } 
-/* function onCreate(){
 
-} */
-
-function onClearAll(event) {
+function onDelete(event) {
 console.log (`My starting value is ${minInp.value}`);
 console.log (`My ending Value is ${maxInp.value}`);
  
 for(let i=0; i < cell.length; i++){
-    const oth = 
+    const oth = event.currentTarget;
      if ((cell< minInp) && (maxInp < cell)){ 
     //document.getElementsByClassName('cell').remove("buzz_selected");   
-    oth.classList.remove("buzz_selected"); 
- } 
+    cell.classList.remove("buzz_selected"); 
+ } else{
+
+ }
  console.log("Clear other elements");  
 }
 }
@@ -83,7 +82,7 @@ function addListeners() {
    buzzbtn.addEventListener("click", onShowAllBuzz);
    fizzbtn.addEventListener("click", onShowAllFiz);
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
-   sbtn.addEventListener("click", onClearAll);
+   sbtn.addEventListener("click", onDelete);
    console.log("Submit data");
    minInp.addEventListener('click', onClick);
    maxInp.addEventListener('click', onClick);
