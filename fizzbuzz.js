@@ -67,25 +67,21 @@ console.log (`My ending Value is ${maxInp.value}`);
 console.log("Clear all cells");  
 while (gameGrid.firstChild) {
     gameGrid.removeChild(gameGrid.firstChild);
-const sq = document.getElementsByClassName(".cell");
-for(let i=0; i < cell.length; i++){
-    if ((sq < minInp) && (maxInp < sq)){ 
-    document.getElementsByClassName('cell');  
 }
 }
-}
-}
-/* function onCreate(){
+
+function onCreate(){
 console.log("Adding new cells");
-//const sq = getElementsByClassName(".cell");
-//document.querySelector(".gameGrid").appendChild(Cell);
-for(let i=0; i < cell.length; i++){
-if ((sq < minInp) && (maxInp < sq)){ 
-document.getElementsByClassName('cell');   
-//sq.classList.add("cell"); 
+const newcells = document.createElement("div");
+newcells.innerText = minInp.value;
+newcells.innerText = maxInp.value;
+gameGrid.appendChild(newcells);
+for(let i=0; i < newcells.length; i++){
+if ((newcells < minInp) && (maxInp < newcells)){   
+newcells.classList.add("cell"); 
 }
 }
-}*/
+}
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
@@ -94,6 +90,7 @@ function addListeners() {
    fizzbtn.addEventListener("click", onShowAllFiz);
    fizzbuzzbtn.addEventListener("click", onShowAllFizzBuzz);
    sbtn.addEventListener("click", onClear);
+   sbtn.addEventListener("click", onCreate);
    console.log("Submit data");
    minInp.addEventListener('click', onClick);
    maxInp.addEventListener('click', onClick);
