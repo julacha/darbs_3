@@ -87,17 +87,17 @@ for (let i = min; i <= max; i++) {
     newCell.innerText = i;
 
     let className = '';
-    if (isFizzBuzz(i)) {
+    if (num % 5 === 0 && num % 3 === 0) {
         className = 'fizzbuzz';
-    }
-    else if (isFizz(i)) {
-        className = 'fizz';
-    }
-    else if (isBuzz(i)) {
-        className = 'buzz';
-    }
-    else {
-        className = 'num';
+        console.log("This is fizzbuzz");
+        }
+        else if (num % 3 == 0) {
+            className = 'fizz';
+            console.log("This is fizz");    
+        }
+        else if (num % 5 == 0) {
+            className = 'buzz'; 
+            console.log("This is buzz");   
     }
  
 newCell.classList.add(className);
@@ -138,7 +138,6 @@ for (let i=0; i < cell.length; i++){
     
 function main (){
     console.log("Running main");
-    onCreate();
     addListeners();
 }
 main();
