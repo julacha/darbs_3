@@ -9,8 +9,6 @@ const buzzbtn = document.getElementById("bzbtn");
 const fizzbuzzbtn = document.getElementById ("fzbzbtn");
 const gameGrid = document.querySelector("#game_grid");
 
-
-
 function onClick(event) {
     console.log("Event of type", event.type);
     const cl = event.currentTarget;
@@ -38,7 +36,6 @@ else if (num % 5 == 0) {
     console.log("This is buzz");   
 } 
 } 
-
 
 function onShowAllFiz() {
     const allFizzCells = document.getElementsByClassName("fizz");
@@ -102,7 +99,7 @@ for (let i = min; i <= max; i++) {
     else {
         className = 'num';
     }
- 
+
 newCell.classList.add(className);
 newCell.id = `sq${i}`;
 newCell.addEventListener("click", onClick);
