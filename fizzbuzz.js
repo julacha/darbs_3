@@ -87,15 +87,15 @@ for (let i = min; i <= max; i++) {
     newCell.innerText = i;
 
     let className = '';
-    if (num % 5 === 0 && num % 3 === 0) {
+    if (i % 5 === 0 && i % 3 === 0) {
         className = 'fizzbuzz';
         console.log("This is fizzbuzz");
         }
-        else if (num % 3 == 0) {
+        else if (i % 3 == 0) {
             className = 'fizz';
             console.log("This is fizz");    
         }
-        else if (num % 5 == 0) {
+        else if (i % 5 == 0) {
             className = 'buzz'; 
             console.log("This is buzz");   
     }
