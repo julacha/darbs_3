@@ -99,6 +99,9 @@ for (let i = min; i <= max; i++) {
             className = 'buzz'; 
             console.log("This is buzz");   
     }
+    else {
+        className = 'num';
+    }
  
 newCell.classList.add(className);
 newCell.id = `sq${i}`;
