@@ -73,15 +73,16 @@ while (gameGrid.firstChild) {
 function onCreate(){
 console.log("Adding new cells");
 const newcells = document.createElement("div");
-newcells.innerText = minInp.value;
+
+newcells.innerText= minInp.value;
 newcells.innerText = maxInp.value;
+//document.body.appendChild(newcells);
 gameGrid.appendChild(newcells);
-for(let i=0; i < newcells.length; i++){
-if ((newcells < minInp) && (maxInp < newcells)){   
+/* for( i = 0; i < newcells.length; i++){
+if ((i < minInp) && (maxInp < i)){  */
 newcells.classList.add("cell"); 
 }
-}
-}
+
 function addListeners() {
    console.log("Adding Listeners");
    console.log(cell.length);
@@ -92,8 +93,8 @@ function addListeners() {
    sbtn.addEventListener("click", onClear);
    sbtn.addEventListener("click", onCreate);
    console.log("Submit data");
-   minInp.addEventListener('click', onClick);
-   maxInp.addEventListener('click', onClick);
+ /*   minInp.addEventListener('click', onClick);
+   maxInp.addEventListener('click', onClick); */
    for (let i=0; i < cell.length; i++){
     const cl = cell[i]; 
     console.log(cl.id);
