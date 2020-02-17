@@ -72,11 +72,6 @@ console.log("Adding new cells");
 const min = parseInt(minInp.value);
 const max = parseInt(maxInp.value);
 
-if (min > max) {
-    console.log(`Starting value must be >= than ending value`);
-    return;
-}
-
 for (let i = min; i <= max; i++) {
   
     const newCell = document.createElement("div");
