@@ -123,14 +123,8 @@ function addListeners() {
 
 
 function onReset() {
-/*  while (gameGrid.firstChild) {
-        gameGrid.removeChild(gameGrid.firstChild);
-} */
 const a = 1;
 const b = 100;
-const mina = parseInt(a.value);
-const maxb = parseInt(b.value);
-
 for (let i = a; i <= b; i++) {
     console.log(a.value);
     console.log(b.value);
