@@ -163,6 +163,15 @@ input[type=number] {
   background: #f44336;
   color: white;
 }
+.cell_selected {
+  display:flex;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: blanchedalmond;
+  align-items: center;
+  justify-content: center;
+}  
 
 @media (max-width: 576px){
  .rules {

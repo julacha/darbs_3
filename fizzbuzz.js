@@ -121,7 +121,27 @@ function addListeners() {
 }
 }   
 
+
 function onReset() {
+/*  while (gameGrid.firstChild) {
+        gameGrid.removeChild(gameGrid.firstChild);
+} */
+const a = 1;
+const b = 100;
+const mina = parseInt(a.value);
+const maxb = parseInt(b.value);
+
+for (let i = a; i <= b; i++) {
+    console.log(a.value);
+    console.log(b.value);
+    const newElement = document.createElement('div');    
+    let className = "num";
+    newElement.classList.add("cell");
+    newElement.classList.add(className);
+    newElement.innerText = i;
+    newElement.id = `sq${i}`;
+gameGrid.appendChild(newElement);
+}
 for (let i=0; i < cell.length; i++){
     const c = cell[i];
     c.classList.remove("buzz_selected");
@@ -130,6 +150,43 @@ for (let i=0; i < cell.length; i++){
     console.log("Resetting Game");
 }
 }
+
+
+
+
+/* allCell.classList.add("cell");
+const num_str=allCell.id.slice(2);
+const num = parseInt(num_str);
+if (isNaN(num))
+{
+    return; 
+} 
+
+allCell.innerText = i;
+newCell.id = `sq${i}`;
+allCell[i].addEventListener("click", onClick);
+gameGrid.appendChild(allCell);
+}
+} */
+
+
+//for (let i=0; i < allCell.length; i++){ */
+//const allCell = document.createElement("div")
+   //const el = allCell[i];
+   /* c.classList.remove("buzz_selected");
+    c.classList.remove("fizz_selected");*
+    c.classList.remove("fizzbuzz_selected");
+    console.log("Resetting Game"); */
+
+//allCell.innerText = i;
+//allCell.id = `sq${i}`; 
+//allCell.addEventListener("click", onClick);
+//gameGrid.appendChild(allCell); 
+
+
+
+
+
     
 function main (){
     console.log("Running main");
